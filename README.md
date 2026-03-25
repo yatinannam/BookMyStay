@@ -92,5 +92,5 @@ For UC12, an inventory file named inventory.txt is created/used in the project r
 
 ## Author
 
-<b>Name:</b> Yatin Annam
+<b>Name:</b> Yatin Annam<br>
 <b>Registration Number</b>: RA2411030010101
