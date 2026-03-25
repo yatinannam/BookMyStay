@@ -89,3 +89,8 @@ For UC12, an inventory file named inventory.txt is created/used in the project r
 - Validating user input and handling errors gracefully
 - Applying basic concurrency controls in shared-state processing
 - Persisting and recovering state using file I/O
+
+## Author
+
+<b>Name:</b> Yatin Annam
+<b>Registration Number</b>: RA2411030010101
