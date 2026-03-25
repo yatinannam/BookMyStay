@@ -1,7 +1,7 @@
 # BookMyStay
 
-BookMyStay is a Java console-based hotel booking system built incrementally across 8 use cases (UC1 to UC8).
-Each use case demonstrates one stage of the domain and service design, from app startup to booking reports.
+BookMyStay is a Java console-based hotel booking system built incrementally across 12 use cases (UC1 to UC12).
+Each use case demonstrates one stage of the domain and service design, from app startup to recovery using persisted state.
 
 ## Tech Stack
 
@@ -19,11 +19,16 @@ Each use case demonstrates one stage of the domain and service design, from app 
 - UC6.java: Safe booking processing with unique room IDs and inventory reduction
 - UC7.java: Add-on services management per reservation
 - UC8.java: Booking history and reporting
+- UC9.java: Input validation and custom exception handling for booking requests
+- UC10.java: Booking cancellation with rollback tracking and inventory restoration
+- UC11.java: Concurrent booking simulation using threads and synchronization
+- UC12.java: Data persistence and recovery of inventory from file storage
 
 ## Important Note
 
 These files are intentionally standalone use-case demos.
 Several class names are reused across files (for example, Room and Reservation), so compile and run one use case at a time.
+Do not compile all files together in one command.
 
 ## Prerequisites
 
@@ -48,7 +53,7 @@ javac UC1.java
 java UC1
 ```
 
-Replace UC1 with any use case class (UC2 to UC8).
+Replace UC1 with any use case class (UC2 to UC12).
 
 ### macOS/Linux
 
@@ -57,7 +62,9 @@ javac UC1.java
 java UC1
 ```
 
-Replace UC1 with any use case class (UC2 to UC8).
+Replace UC1 with any use case class (UC2 to UC12).
+
+For UC12, an inventory file named inventory.txt is created/used in the project root during execution.
 
 ## Use Case Highlights
 
@@ -69,10 +76,16 @@ Replace UC1 with any use case class (UC2 to UC8).
 6. UC6 processes queued reservations atomically and prevents double booking.
 7. UC7 supports per-reservation add-on services and total add-on cost.
 8. UC8 stores confirmed reservations and generates a booking report.
+9. UC9 validates booking inputs and handles invalid requests with custom exceptions.
+10. UC10 cancels reservations and restores inventory with rollback history tracking.
+11. UC11 simulates concurrent bookings with synchronized queue and inventory access.
+12. UC12 loads and saves inventory state to disk for restart recovery.
 
 ## Learning Outcomes
 
 - Modeling domains with abstract and concrete classes
 - Separating concerns between domain objects and services
 - Managing state safely with inventory and queue patterns
-- Building step-by-step use-case oriented Java programs
+- Validating user input and handling errors gracefully
+- Applying basic concurrency controls in shared-state processing
+- Persisting and recovering state using file I/O
